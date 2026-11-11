@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ms — Draria, Alger | Minimalist Clothing</title><meta name="description" content="Ms — Minimalist clothing for Men & Women in Draria, Alger. Created by Mikhail. Co-founded by Baghdad.">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="top">Free delivery in Draria • Tel +213540525486</header>
+<header class="nav"><a class="logo" href="#">Ms.</a><nav><a href="#shop" data-t="nav_shop">Shop</a><a href="#founders" data-t="nav_founders">Founders</a><a href="#looks" data-t="nav_looks">Looks</a><a href="#visit" data-t="nav_visit">Visit Us</a></nav>
+<div class="tools"><div class="langs"><button onclick="setLang('en')" class="on">EN</button><button onclick="setLang('fr')">FR</button><button onclick="setLang('ar')">AR</button><button onclick="setLang('dz')">DZ</button></div>
+<a class="ig" href="https://www.instagram.com/baghdad_2446" target="_blank" rel="noopener" aria-label="Instagram @baghdad_2446">◎</a>
+<button onclick="openCart()">🛍 <span id="cartCount">0</span></button><a class="adminlink" href="#admin" onclick="showAdmin()">Admin</a></div></header>
+
+<section class="hero"><div><p class="eyebrow">DRARIA • ALGER</p><h1 data-t="hero_title">Dress simple.<br>Look expensive.</h1><p data-t="hero_sub">Minimalist clothing for Men & Women — black, grey, white & dark. Created by Mikhail. Co-founded by Baghdad.</p>
+<div class="cta"><a class="btn black" href="#shop" data-t="shop_now">Shop Now</a><a class="btn white" href="https://wa.me/213540525486?text=Salam%20Ms%2C%20I%20want%20a%20consultation" target="_blank">WhatsApp</a></div>
+<p class="small">Sat–Thu 10:00–20:00 • Cash on Delivery • Draria Free</p></div><img src="assets/hero.jpg" alt="Baghdad — Co-founder, black turtleneck"></section>
+
+<section id="founders" class="section"><h2 data-t="founders_title">Meet the Founders</h2><div class="grid2">
+<div class="card"><h3>Creator — Mikhail</h3><p data-t="mikhail_text">Creator of Ms. The vision, the taste, the world behind Ms.</p></div>
+<div class="card"><img src="assets/beige.jpg" alt="Baghdad co-founder"><h3>Co-founder — Baghdad</h3><p data-t="baghdad_text">Co-founder of Ms. The face of the brand, styling and consultation in Draria.</p></div></div></section>
+
+<section id="looks" class="section"><h2 data-t="looks_title">Baghdad's Looks</h2><p>Co-founder Baghdad — Created by Mikhail</p><div class="gallery">
+<figure><img src="assets/greysuit.jpg"><figcaption>Grey Suit — <button onclick="goShop()">Shop This Look</button></figcaption></figure>
+<figure><img src="assets/denim.jpg"><figcaption>Denim Day — <button onclick="goShop()">Shop This Look</button></figcaption></figure>
+<figure><img src="assets/studio.jpg"><figcaption>Studio Grey — <button onclick="goShop()">Shop This Look</button></figcaption></figure>
+<figure><img src="assets/whitetee.jpg"><figcaption>White Tee — <button onclick="goShop()">Shop This Look</button></figcaption></figure>
+<figure><img src="assets/blackcoat.jpg"><figcaption>Black Coat — <button onclick="goShop()">Shop This Look</button></figcaption></figure>
+<figure><img src="assets/consult.jpg"><figcaption>Consultation — <button onclick="goShop()">Shop This Look</button></figcaption></figure></div></section>
+
+<section id="shop" class="section"><h2 data-t="shop_title">Shop — Prices in DA</h2>
+<div class="filters"><input id="search" placeholder="Search..." oninput="render()"><select id="cat" onchange="render()"><option value="all">All</option><option>Women</option><option>Men</option><option>Essentials</option></select><select id="sort" onchange="render()"><option value="feat">Featured</option><option value="low">Price low</option><option value="high">Price high</option></select></div>
+<div id="products" class="products"></div></section>
+
+<section class="section"><h2 data-t="consult_title">Styling Consultation</h2><p>Book a consultation in Draria or on WhatsApp. We help you dress simple and sharp.</p>
+<form onsubmit="return book(event)"><input id="bname" placeholder="Your name" required><input id="bphone" placeholder="Phone / WhatsApp" required><select id="btype"><option>Men</option><option>Women</option><option>Event / Wedding</option></select><button class="btn black" type="submit">Book via WhatsApp</button></form><p id="bookMsg"></p></section>
+
+<section id="visit" class="section"><h2 data-t="visit_title">Visit Us — Draria, Alger</h2><p>Sat–Thu 10:00–20:00 • Tel / WhatsApp +213540525486 • Instagram @baghdad_2446</p>
+<div class="zones"><b>Delivery:</b> Draria <b>Free</b> • Alger Centre <b>400 DA</b> • Bab Ezzouar <b>500 DA</b> • Rest of Alger <b>600 DA</b> • Cash on Delivery</div></section>
+
+<footer><p>Ms — Created by Mikhail • Co-founded by Baghdad • Draria, Alger</p><p><a href="https://www.instagram.com/baghdad_2446" target="_blank">Instagram @baghdad_2446</a> • <a href="https://wa.me/213540525486" target="_blank">WhatsApp</a></p></footer>
+
+<aside id="cartDrawer"><h3>Cart</h3><div id="cartItems"></div><p id="cartTotal"></p><button class="btn black" onclick="checkout()">Checkout via WhatsApp</button><button onclick="closeCart()">Close</button></aside>
+
+<section id="admin" class="section hidden"><h2>Admin Dashboard</h2><p>Default PIN: <b>2446</b> — change it after first login. This GitHub version saves in this browser only (localStorage).</p>
+<div id="loginBox"><input id="pin" type="password" placeholder="PIN"><button onclick="login()">Login</button><p id="loginMsg"></p></div>
+<div id="adminPanel" class="hidden"><p>Products (edit price, save):</p><div id="adminProducts"></div><label>WhatsApp <input id="setWa" value="+213540525486"></label> <button onclick="saveSettings()">Save Settings</button><button onclick="logout()">Logout</button></div></section>
+
+<script src="app.js"></script></body></html>
